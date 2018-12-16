@@ -1,0 +1,37 @@
+<ion-header>
+
+  <ion-navbar color="secondary">
+    <ion-title>Add Child</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-item>
+        <ion-label floating>Child Nane</ion-label>
+            <ion-input type="text" [(ngModel)]="mychild.name"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label floating> child age</ion-label>
+            <ion-input type="number" [(ngModel)]="mychild.age"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label floating>child residential</ion-label>
+            <ion-input type="text" [(ngModel)]="mychild.residential"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>child Address</ion-label>
+          <ion-input type="text" [(ngModel)]="mychild.address"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>child school name</ion-label>
+        <ion-input type="text" [(ngModel)]="mychild.school_name"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label floating>child school Address</ion-label>
+      <ion-input type="text" [(ngModel)]="mychild.school_address"></ion-input>
+</ion-item>
+    <button ion-button full (click)="AddChild()"> add </button>
+</ion-content>

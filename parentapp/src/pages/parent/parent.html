@@ -1,0 +1,39 @@
+<!--
+  Generated template for the ParentPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+      <ion-buttons end >
+          <button ion-button icon-onl (click)="goaddchild()">
+            <ion-icon name="add"></ion-icon>
+          </button>
+        </ion-buttons>
+    <ion-title>parent</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list *ngFor="let child of childlist">
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="">
+        </ion-avatar>
+        <h2> {{child.name}} </h2>
+        <h3>Don't Know What To Do</h3>
+        <p>I've had a pretty messed up day. If we just...</p>
+      </ion-item>
+    </ion-list>
+    <ion-list *ngFor="let location of locationlist">
+      <ion-item>
+        <h2> {{location.latitude}} </h2>
+        <h2> {{location.longitude}} </h2>
+        
+      </ion-item>
+    </ion-list>
+</ion-content>
