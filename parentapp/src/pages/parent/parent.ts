@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams,ActionSheetController  } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ActionSheetController } from 'ionic-angular';
 import { AngularFireDatabase, FirebaseListObservable, } from 'angularfire2/database';
 import { child } from '../../model/child';
 import { facultylocation } from '../../model/facultylocation';
@@ -17,23 +17,24 @@ import { facultylocation } from '../../model/facultylocation';
   templateUrl: 'parent.html',
 })
 export class ParentPage {
-  locationref:FirebaseListObservable<facultylocation[]>;
-  childref:FirebaseListObservable<child[]>;
-  childlist:child[];
-  locationlist:facultylocation[];
+  locationref: FirebaseListObservable<facultylocation[]>;
+  childref: FirebaseListObservable<child[]>;
+  childlist: child[];
+  locationlist: facultylocation[];
   constructor(public navCtrl: NavController, public navParams: NavParams,
-    private database:AngularFireDatabase,
-    ) {
+    private database: AngularFireDatabase) {
 
-      this.locationref=this.database.list('location');
-      this.childref=this.database.list('child');
-      this.childref.subscribe((items)=>{
-        this.childlist=items;})
-        this.locationref.subscribe((items)=>{
-          this.locationlist=items;})
+    this.locationref = this.database.list('location');
+    this.childref = this.database.list('child');
+    this.childref.subscribe((items) => {
+      this.childlist = items;
+    })
+    this.locationref.subscribe((items) => {
+      this.locationlist = items;
+    })
   }
 
-  goaddchild(){
+  goaddchild() {
     this.navCtrl.push('AddchildPage');
   }
 

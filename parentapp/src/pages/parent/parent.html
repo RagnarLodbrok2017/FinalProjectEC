@@ -7,11 +7,11 @@
 <ion-header>
 
   <ion-navbar>
-      <ion-buttons end >
-          <button ion-button icon-onl (click)="goaddchild()">
-            <ion-icon name="add"></ion-icon>
-          </button>
-        </ion-buttons>
+    <ion-buttons end>
+      <button ion-button icon-onl (click)="goaddchild()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
     <ion-title>Parent Page</ion-title>
   </ion-navbar>
 
@@ -20,33 +20,28 @@
 
 <ion-content padding>
   <ion-list *ngFor="let child of childlist">
-      <ion-item>
-        <ion-avatar item-start>
-          <img src="assets/imgs/child.JPG">
-        </ion-avatar>
-        <h2 class="name"> {{child.name}} </h2>
-        <h4>My Child</h4>
-        <p>I will send My Location soon ......</p>
-      </ion-item>
-    </ion-list>
-    <ion-list *ngFor="let location of locationlist">
-      <ion-item>
-        <!-- <h2> {{location.latitude}} </h2>
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="assets/imgs/child.JPG">
+      </ion-avatar>
+      <h2 class="name"> {{child.name}} </h2>
+      <h4>My Child</h4>
+      <p>I will send My Location soon ......</p>
+    </ion-item>
+  </ion-list>
+  <ion-list *ngFor="let location of locationlist">
+    <ion-item>
+      <!-- <h2> {{location.latitude}} </h2>
         <h2> {{location.longitude}} </h2> -->
-        <ion-row>
-          <ion-col text-center>
-            <p> Hello My Father My Location is </p>
-            <agm-map
-                  [latitude]="location.latitude"
-                  [longitude]="location.longitude"
-                  [zoom]="15">
-                  <agm-marker
-                  [latitude]="location.latitude"
-                  [longitude]="location.longitude" >
-                </agm-marker>
-            </agm-map>
-          </ion-col>
-        </ion-row>
-      </ion-item>
-    </ion-list>
+      <ion-row>
+        <ion-col text-center>
+          <p> Hello My Father My Location is </p>
+          <agm-map [latitude]="location.latitude" [longitude]="location.longitude" [zoom]="15">
+            <agm-marker [latitude]="location.latitude" [longitude]="location.longitude">
+            </agm-marker>
+          </agm-map>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+  </ion-list>
 </ion-content>

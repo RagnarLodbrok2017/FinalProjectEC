@@ -32,6 +32,7 @@ export class DetlocationmodelPage {
     this.baselocation.latitude=$event.coords.lat;
     this.baselocation.longitude=$event.coords.lng;
     this.locationset=true;
+    this.database.list('location').remove();
     this.locationref.push(this.baselocation);
   }
   
