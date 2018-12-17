@@ -1,8 +1,8 @@
 <ion-header>
 
-  <ion-navbar color="secondary">
-    <ion-title>Add Child</ion-title>
-  </ion-navbar>
+    <ion-navbar color="secondary">
+        <ion-title>Add Child</ion-title>
+    </ion-navbar>
 
 </ion-header>
 
@@ -10,28 +10,58 @@
 <ion-content padding>
 
     <ion-item>
-        <ion-label floating>Child Nane</ion-label>
-            <ion-input type="text" [(ngModel)]="mychild.name"></ion-input>
+        <ion-label floating>Child Name</ion-label>
+        <ion-input type="text" [(ngModel)]="mychild.name"></ion-input>
     </ion-item>
     <ion-item>
-        <ion-label floating> child age</ion-label>
-            <ion-input type="number" [(ngModel)]="mychild.age"></ion-input>
+        <ion-label floating> child Age</ion-label>
+        <ion-input type="number" [(ngModel)]="mychild.age"></ion-input>
     </ion-item>
     <ion-item>
-        <ion-label floating>child residential</ion-label>
-            <ion-input type="text" [(ngModel)]="mychild.residential"></ion-input>
+        <ion-label floating>child Residential</ion-label>
+        <ion-input type="text" [(ngModel)]="mychild.residential"></ion-input>
     </ion-item>
-    <ion-item>
+    <!-- <ion-item>
       <ion-label floating>child Address</ion-label>
           <ion-input type="text" [(ngModel)]="mychild.address"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label floating>child school name</ion-label>
+  </ion-item> -->
+    <ion-item>
+        <ion-label floating>child school name</ion-label>
         <ion-input type="text" [(ngModel)]="mychild.school_name"></ion-input>
-</ion-item>
-<ion-item>
-  <ion-label floating>child school Address</ion-label>
-      <ion-input type="text" [(ngModel)]="mychild.school_address"></ion-input>
-</ion-item>
+    </ion-item>
+    <ion-item>
+        <ion-label floating>child school Address</ion-label>
+        <!-- <ion-input type="text" [(ngModel)]="mychild.school_address"></ion-input> -->
+    </ion-item>
+    <ion-grid>
+        <ion-row>
+            <ion-col col-6>
+                <button ion-button block outline icon-left (click)="setonmap()">
+                    <ion-icon name="map">
+                    </ion-icon>
+                    SchoolLocation
+                </button>
+            </ion-col>
+            <ion-col col-6>
+                <button ion-button block outline icon-left (click)="setonmap2()">
+                    <ion-icon name="map">
+                    </ion-icon>
+                    HomeLocation
+                </button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <!-- <h2 floating>child Address</h2>
+    <agm-map [latitude]="baselocation.latitude"
+           [longitude]="baselocation.longitude"
+           [zoom]="15"
+           (mapClick)="placeMarker($event)">
+    <agm-marker 
+    *ngIf="locationset"
+    [latitude]="baselocation.latitude"
+    [longitude]="baselocation.longitude" >
+  </agm-marker>
+  </agm-map> -->
+    <!-- <ion-input type="text" [(ngModel)]="mychild.address"></ion-input> -->
     <button ion-button full (click)="AddChild()"> add </button>
 </ion-content>

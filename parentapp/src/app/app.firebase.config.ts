@@ -6,3 +6,4 @@ export const firebase_config= {
     storageBucket: "parenteye-35238.appspot.com",
     messagingSenderId: "1065794579889"
   };
+  export const ChildList = "Child";

@@ -19,10 +19,10 @@ export class DetlocationmodelPage {
   locationset=false;
   baselocation:facultylocation=new facultylocation(29.866866,31.315270);
 
- locationref:FirebaseListObservable<facultylocation[]>;
+ //locationref:FirebaseListObservable<facultylocation[]>;
   constructor(public navCtrl: NavController, public navParams: NavParams,
     private viewctrl:ViewController ,private database:AngularFireDatabase) {
-      this.locationref=this.database.list('location');
+      //this.locationref=this.database.list('location');
   }
 
   ionViewDidLoad() {
@@ -32,9 +32,11 @@ export class DetlocationmodelPage {
     this.baselocation.latitude=$event.coords.lat;
     this.baselocation.longitude=$event.coords.lng;
     this.locationset=true;
-    this.locationref.push(this.baselocation);
+    //this.locationref.push(this.baselocation);
   }
-  
+  clieck(event){
+ 
+  }
   setlocation(){
     this.viewctrl.dismiss(this.baselocation); 
 

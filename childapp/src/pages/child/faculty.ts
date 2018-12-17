@@ -40,9 +40,8 @@ export class FacultyPage {
       this.baselocation=data;
       this.locationset=true;
     })
-
-
   }
+  
   tackphoto(){
 
   }

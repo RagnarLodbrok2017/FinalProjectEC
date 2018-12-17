@@ -1,19 +1,18 @@
-import { firebase_config } from './../../app/app.firebase.config';
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
-import { AddchildPage } from './addchild';
+import { DetlocationmodelPage } from './detlocationmodel';
 import{AgmCoreModule} from '@agm/core';
 
 @NgModule({
   declarations: [
-    AddchildPage,
+    DetlocationmodelPage,
   ],
   imports: [
-    IonicPageModule.forChild(AddchildPage),
+    IonicPageModule.forChild(DetlocationmodelPage),
     AgmCoreModule.forRoot({
       apiKey:'AIzaSyCIHg0L8RtTMcAleWqjbJp7nb6DY5PJTrg'
       
     })
   ],
 })
-export class AddchildPageModule {}
+export class DetlocationmodelPageModule {}
